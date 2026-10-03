@@ -85,7 +85,7 @@ class GameScene:
 
 
     def __hash__(self):
-        return hash(self._tag, self._title, self._description)
+        return hash((self._tag, self._title, self._description))
 
 
     def __eq__(self, other):

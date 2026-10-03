@@ -39,7 +39,7 @@ class GamePassword:
 
 
     def __hash__(self):
-        return hash(self._string, self._fail)
+        return hash((self._string, self._fail))
 
 
     def __eq__(self, other):

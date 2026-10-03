@@ -57,7 +57,7 @@ class GameAction:
 
 
     def __hash__(self):
-        return hash(self._prompt, self._result)
+        return hash((self._prompt, self._result))
 
 
     def __eq__(self, other):
