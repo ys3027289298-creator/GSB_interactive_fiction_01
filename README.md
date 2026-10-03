@@ -141,6 +141,29 @@ password's `value`.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+## Tests
+
+The test suite in `tests/` pins down the runtime behaviour of `src/main.py`
+as the contract: scene jump loops, empty/invalid choices, password state not
+resetting after failures, the menu's return key, action results not being
+written back to scenes, consecutive replays, and full scene reachability
+from the entry scene.
+
+Run it from the repository root (only the standard library is needed):
+
+```shell
+python3 -m unittest discover -s tests -v
+```
+
+To verify that the endings are deterministic, replay the scripted input
+files in `tests/replay/` twice through the real game and compare the output:
+
+```shell
+python3 tests/replay/run_replay.py
+```
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 ## Author
 
 Marco Plaitano
